@@ -1,0 +1,24 @@
+#Solução esperada para a classe Curso a ser incluida no arquivo
+class Curso:
+    #construtor da classe Curso
+    def __init__(self, nome_curso, carga_horaria, turno):
+        self.curso = nome_curso #atributo: nome do curso
+        self.carga_horaria = carga_horaria #atributo: carga horária total (int)
+        self.turno = turno #atributo: turno (Noturno/Vespertino/Matutino)
+
+    #metodo para exibir os detalhes do curso de forma formatada
+    def exibir_detalhes(self):
+        print("\n" + "*" * 40)
+        print(f" DESTALHES DO CURSO - EFG")
+        print("*" * 40)
+        print(f"Curso: {self.curso}")
+        print(f"Turno: {self.carga_horaria}")
+        print(f"Turno: {self.turno}")
+        print("*" * 40 + "\n")
+
+#Inclusão de teste esperado dentro do bloco "if__name__=='__main__'."
+if __name__ == "__main__":
+    #(mantém o código de teste dos alunos que fizemos no Live Code)
+    print("\n--- TESTANDO A ENTIDADE CURSO DO SISTEMA ---")
+    curso_web = Curso("Técnico em Desenvolvimento Web e Mobile 2", 400, "Noturno")
+    curso_web.exibir_detalhes()
